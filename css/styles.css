@@ -16,6 +16,9 @@ p {
   margin-top: 0;
   margin-bottom: 0;
 }
+img {
+  display: block;
+}
 
 ul,
 ol {
@@ -79,6 +82,7 @@ body {
 }
 
 .nav-link {
+  display: block;
   text-decoration: none;
   padding: 24px 0;
   font-weight: 500;
@@ -147,8 +151,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 48px;
-  min-width: 169px;
-  height: 56px;
+  padding: 16px 32px;
   border: none;
   border-radius: 4px;
 }
@@ -272,6 +275,7 @@ body {
   color: #434455;
 }
 .portfolio-item-title {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
