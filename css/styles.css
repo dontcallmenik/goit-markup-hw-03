@@ -1,9 +1,9 @@
 .container {
-  max-width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 1158px; /* ограничивает максимальную ширину контента по макету */
+  padding-left: 15px; /* внутренний отступ слева, чтобы контент не лип к краю */
+  padding-right: 15px; /* то же справа */
+  margin-left: auto; /* центрируем контейнер по горизонтали */
+  margin-right: auto; /* центрируем контейнер по горизонтали */
 }
 
 h1,
@@ -13,22 +13,23 @@ h4,
 h5,
 h6,
 p {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 0; /* убираем стандартные отступы браузера */
+  margin-bottom: 0; /* чтобы все отступы контролировать самим */
 }
+
 img {
-  display: block;
+  display: block; /* убирает лишние "щели" под картинками */
 }
 
 ul,
 ol {
   margin-top: 0;
   margin-bottom: 0;
-  padding-left: 0;
+  padding-left: 0; /* убираем стандартный отступ списка */
 }
 
 ul {
-  list-style: none;
+  list-style: none; /* убираем маркеры */
   padding: 0;
   margin: 0;
 }
@@ -43,10 +44,13 @@ body {
 }
 .section {
   padding: 120px 0;
+  /* расстояние МЕЖДУ секциями:
+120px сверху и снизу,
+     0 слева и справа (за это отвечает container) */
 }
 
 .header {
-  border-bottom: 1px solid #e7e9fc;
+  border-bottom: 1px solid #e7e9fc; /* нижняя линия как в макете */
 }
 
 .logo {
@@ -58,8 +62,8 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: #2e2f42;
-  padding: 16px 0;
-  margin-right: 76px;
+  padding: 16px 0; /* увеличивает высоту кликабельной зоны */
+  margin-right: 76px; /* расстояние между логотипом и навигацией */
 }
 
 .logo span {
@@ -69,22 +73,22 @@ body {
   color: #404bbf;
 }
 .header .container {
-  display: flex;
-  align-items: center;
+  display: flex; /* выстраиваем логотип, меню и контакты в строку */
+  align-items: center; /* выравниваем их по вертикали */
 }
 .navigation {
-  display: flex;
+  display: flex; /* навигация и список в одну линию */
   align-items: center;
 }
 .nav-list {
-  display: flex;
-  gap: 40px;
+  display: flex; /* пункты меню в ряд */
+  gap: 40px; /* расстояние между пунктами меню */
 }
 
 .nav-link {
-  display: block;
+  display: block; /* чтобы padding работал по вертикали */
   text-decoration: none;
-  padding: 24px 0;
+  padding: 24px 0; /* увеличивает высоту header до макета */
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -97,21 +101,20 @@ body {
 }
 .address {
   font-style: normal;
-  margin-left: auto;
+  margin-left: auto; /* отталкивает блок с контактами вправо */
 }
 .address-list {
-  display: flex;
-  gap: 40px;
+  display: flex; /* контакты в строку */
+  gap: 40px; /* расстояние между email и phone */
 }
-
 .contact-link {
   color: #434455;
   text-decoration: none;
   font-size: 16px;
   letter-spacing: 0.02em;
   line-height: 1.5;
-  display: block;
-  padding: 24px 0;
+  display: block; /* чтобы padding работал */
+  padding: 24px 0; /* высота header как у навигации */
 }
 
 .contact-link:hover,
@@ -121,7 +124,7 @@ body {
 
 .hero {
   background-color: #2e2f42;
-  padding: 188px 0;
+  padding: 188px 0; /* вертикальные отступы секции hero по макету */
 }
 .hero-title {
   font-weight: 700;
@@ -130,9 +133,9 @@ body {
   letter-spacing: 0.02em;
   text-align: center;
   color: #ffffff;
-  max-width: 496px;
+  max-width: 496px; /* ограничиваем ширину текста */
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; /* центрируем заголовок */
 }
 
 .hero-button:hover,
@@ -147,11 +150,11 @@ body {
   background-color: #4d5ae5;
   color: #ffffff;
   cursor: pointer;
-  display: block;
+  display: block; /* чтобы margin auto сработал */
   margin-left: auto;
-  margin-right: auto;
-  margin-top: 48px;
-  padding: 16px 32px;
+  margin-right: auto; /* центрируем кнопку */
+  margin-top: 48px; /* расстояние от заголовка */
+  padding: 16px 32px; /* размер кнопки по макету */
   border: none;
   border-radius: 4px;
 }
@@ -169,13 +172,15 @@ body {
 }
 
 .features-list {
-  display: flex;
-  gap: 24px;
-}
-.features-list li {
-  width: calc((100% - 72px) / 4);
+  display: flex; /* элементы в ряд */
+  gap: 24px; /* расстояние между карточками */
 }
 
+.features-list li {
+  width: calc((100% - 72px) / 4);
+  /* 4 карточки в ряд:
+     72px = 3 промежутка по 24px */
+}
 .features-item-title {
   font-weight: 500;
   font-size: 20px;
@@ -211,21 +216,21 @@ body {
   line-height: 1.2;
   color: #2e2f42;
   text-align: center;
-  margin-bottom: 8px;
+  margin-bottom: 8px; /*Потому что по макету между именем и должностью есть небольшой отступ.*/
 }
 
 .team-list {
-  display: flex;
-  gap: 24px;
+  display: flex; /* карточки в ряд */
+  gap: 24px; /* расстояние между карточками */
 }
 .team-item {
   background-color: #ffffff;
-  border-radius: 0 0 4px 4px;
-  width: calc((100% - 72px) / 4);
+  border-radius: 0 0 4px 4px; /* скругление низа карточки */
+  width: calc((100% - 72px) / 4); /* 4 карточки в ряд */
 }
 
 .team-content {
-  padding: 32px 16px;
+  padding: 32px 16px; /* внутренние отступы текста внутри карточки */
 }
 .team-name,
 .team-position {
@@ -243,7 +248,7 @@ body {
   margin-bottom: 8px;
 }
 .team-title {
-  margin-bottom: 72px;
+  margin-bottom: 72px; /* расстояние от заголовка до карточек */
 }
 .portfolio-title {
   text-align: center;
@@ -261,13 +266,17 @@ body {
   row-gap: 48px;
 }
 .portfolio-item {
-  width: calc((100% - 48px) / 3);
+  width: calc(
+    (100% - 48px) / 3
+  ); /* 3 карточки в ряд:
+     48px = 2 промежутка по 24px */
 }
 .portfolio-content {
-  padding: 32px 16px;
-  border: 1px solid #e7e9fc;
-  border-top: none;
+  padding: 32px 16px; /* отступы внутри карточки */
+  border: 1px solid #e7e9fc; /* рамка карточки */
+  border-top: none; /* сверху рамки нет (там картинка) */
 }
+
 .portfolio-item-type {
   font-size: 16px;
   letter-spacing: 0.02em;
@@ -275,7 +284,7 @@ body {
   color: #434455;
 }
 .portfolio-item-title {
-  margin-bottom: 8px;
+  margin-bottom: 8px; /* расстояние между заголовком и текстом */
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -286,11 +295,23 @@ body {
 
 .footer {
   background-color: #2e2f42;
-  padding: 100px 0;
+  padding: 100px 0; /* вертикальные отступы футера */
 }
 .footer-logo {
-  display: inline-block;
-  margin-bottom: 16px;
+  display: inline-block; /* 
+    Ссылка <a> по умолчанию — inline.
+    У inline-элементов margin-top / margin-bottom работают плохо
+    и они не отталкивают элементы по вертикали.
+
+    Мы делаем inline-block, чтобы:
+    1) элемент остался по ширине текста (не растягивался на всю строку, как block)
+    2) можно было нормально задать вертикальные отступы (margin)
+  */
+  margin-bottom: 16px; /*
+    Отступ снизу между логотипом и текстом в футере.
+    Это визуальное расстояние взято из макета,
+    чтобы текст не прилипал к логотипу и выглядел как на дизайне.
+  */
   text-decoration: none;
   color: #f4f4fd;
   font-family: "Raleway", sans-serif;
@@ -306,7 +327,7 @@ body {
   letter-spacing: 0.02em;
   line-height: 1.5;
   color: #f4f4fd;
-  max-width: 264px;
+  max-width: 264px; /* ограничиваем ширину текста */
 }
 
 .footer span {
@@ -315,3 +336,43 @@ body {
 .footer span:hover {
   color: #404bbf;
 }
+/*❓ Почему именно 496px, 264px, 1158px — откуда числа?
+
+ Я взял их из макета.
+
+В Figma:
+
+кликаешь по тексту
+
+смотришь width
+
+Например:
+
+Hero title → ~496px
+
+Footer text → ~264px
+
+Container → ~1158px
+
+📌 Если бы макета не было:
+
+Я бы выбрал “на глаз”
+
+но с макетом — всегда берём цифры оттуда
+
+5️⃣ Главное правило, чтобы не путаться
+Когда ты видишь:
+
+max-width → чтобы текст не растягивался
+
+inline-block → это был inline-элемент, но ему нужны отступы
+
+margin-bottom: 8px → визуальный зазор между элементами
+
+💡 Я не “придумывал стили”, я:
+
+Смотрел на макет
+
+Видел расстояние / ширину
+
+Повторяли это CSS-ом*/
